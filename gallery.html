@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conner Langston</title>
+    <link href="resources/styles/styleindex.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="resources/imagies/logo.png" alt="logo" class="logo">
+    </a>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="experience.html"> experience</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html"> gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="major.html"> major</a></li>
+            <li class="nav-item"><a class="nav-link active" href="resume.html"> resume</a></li>
+            <li class="nav-item"><a class="nav-link active" href="weblinks.html"> weblinks</a></li>
+        </ul>
+    </nav>
+</header>
+<br>
+
+<div class="content">
+    <div class="sidebar">
+        <h2>Contact me</h2>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{{YOUR FORM ID HERE}}" method="post">
+            <fieldset id="fs-frm-inputs">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="form-control" name="name" id="full-name" placeholder="First and Last" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="sample@email.com" required="">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" rows="5" name="message" id="message" placeholder="Your Message" required=""></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <hr>
+
+        <div id="apiDisplay"></div>
+
+        <script>
+            const div = document.getElementById('apiDisplay')
+            const url = 'https://icanhazdadjoke.com/';
+
+            const headers = new Headers({
+                'Accept' : 'application/json'
+            });
+
+            fetch(url, {headers})
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    let p = document.createElement('p');
+                    p.innerHTML = `${data.joke}`;
+                    div.appendChild(p);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        </script>
+
+    </div>
+
+    <div class="displayContent">
+        <h1>Photo Gallery!!</h1>
+        <img src="resources/imagies/pic3.png" alt="pic3" class="pic3">
+        <h5> This was me at the golden gate brdige it was pretty sick if you ask me!</h5>
+        <img src="resources/imagies/pic2.png" alt="pic2" class="pic2">
+        <h5> This was me at yellowstone when my friends and I travled cross country.</h5>
+    </div>
+</div>
+
+<footer>
+    <a herf="https://www.linkedin.com/in/conner-langston-4858292b5/">LinkedIn</a>
+    <a herf ="https://github.com/ConnerLangston"> Github</a>
+    <p> Conner Langston <br> 301 S Pugh St, State College, PA 16801 <br> (919) 698-0097 <br>conner.langston@icloud.com<br></p>
+    <p>&copy; Copyright 2024</p>
+</footer>
+
+</body>
+</html>

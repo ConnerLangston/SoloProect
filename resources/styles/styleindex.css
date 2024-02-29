@@ -1,0 +1,82 @@
+/* styleindex.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left side) */
+    margin-top: 20px;
+}
+
+.content .sidebar {
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content .displayContent {
+    padding: 20px;
+    max-width: calc(100% - 320px); /* Adjust the width based on sidebar width and margin */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.content .displayContent .picofme {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Optionally, set a maximum height */
+}
+.content .displayContent .pic3 {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Optionally, set a maximum height */
+}
+.content .displayContent .pic2 {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Optionally, set a maximum height */
+}
+.content .displayContent .cyber {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="resources/styles/styleindex.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="resources/imagies/logo.png" alt="logo" class="logo">
+    </a>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="experience.html"> experience</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html"> gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="major.html"> major</a></li>
+            <li class="nav-item"><a class="nav-link active" href="resume.html"> resume</a></li>
+            <li class="nav-item"><a class="nav-link active" href="weblinks.html"> weblinks</a></li>
+        </ul>
+    </nav>
+</header>
+<br>
+
+<div class="content">
+    <div class="sidebar">
+        <h2>Contact me</h2>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{{YOUR FORM ID HERE}}" method="post">
+            <fieldset id="fs-frm-inputs">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="form-control" name="name" id="full-name" placeholder="First and Last" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="sample@email.com" required="">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" rows="5" name="message" id="message" placeholder="Your Message" required=""></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <hr>
+
+        <div id="apiDisplay"></div>
+
+        <script>
+            const div = document.getElementById('apiDisplay')
+            const url = 'https://icanhazdadjoke.com/';
+
+            const headers = new Headers({
+                'Accept' : 'application/json'
+            });
+
+            fetch(url, {headers})
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    let p = document.createElement('p');
+                    p.innerHTML = `${data.joke}`;
+                    div.appendChild(p);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        </script>
+
+    </div>
+
+    <div class="main-content">
+        <h2>EXECUTIVE SUMMARY</h2>
+        <p>
+            I am a Cyber Security major at Penn State University in my Sophomore year. I have a solid foundation in my area of study and believe I have other skills/attributes that will allow me to succeed in my future career. I am seeking an internship in the cyber security industry or in IT Security of an organization where I can apply the skills I’ve acquired so far and to continue learning from others in the field in which I hope to spend my career.
+        </p>
+
+        <h2>EDUCATION</h2>
+        <ul>
+            <li>Penn State University – University Park campus, Cybersecurity major</li>
+            <li>GPA 3.20</li>
+        </ul>
+
+        <h2>MAJOR RELATED SKILLS</h2>
+        <ul>
+            <li>MySQL</li>
+            <li>Wireshark</li>
+            <li>Java</li>
+            <li>Teaching</li>
+            <li>Network analysis</li>
+            <li>Mentor</li>
+        </ul>
+
+        <h2>PROJECTS</h2>
+        <ul>
+            <li>Automatic stock market trader</li>
+            <li>Ddos and flooding attacks in lab</li>
+        </ul>
+
+        <h2>WORK EXPERIENCE</h2>
+        <ul>
+            <li><strong>Substitute Teacher, Wake County, NC</strong> (April - Present)
+                <ul>
+                    <li>Taught K-12 technology classes</li>
+                    <li>Developed and implemented educational plans</li>
+                    <li>Coordinated with other teachers in overseeing school activities</li>
+                    <li>Effectively managed class sizes of 30-40 students</li>
+                </ul>
+            </li>
+            <li><strong>Waiter, Tap Station, Apex, NC</strong> (May-August 2022)
+                <ul>
+                    <li>Managed all duties of a waiter in 175 seat busy restaurant</li>
+                    <li>Provided good customer care</li>
+                    <li>Exceptional multitasking</li>
+                </ul>
+            </li>
+            <li><strong>Barback, Cotton House Brewery, Cary, NC</strong> (April-August 2021)
+                <ul>
+                    <li>Assisted bartender in providing service to customers</li>
+                    <li>Provided exceptional customer service to 30 tables per night</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>ACADEMIC AWARDS/HONORS</h2>
+        <ul>
+            <li>Top 25% of all competitors in National Cyber League</li>
+            <li>Third in NC State DECA Competition - 2020 and 2022</li>
+        </ul>
+
+        <h2>HIGH SCHOOL/ COLLEGE ACTIVITIES</h2>
+        <ul>
+            <li>CrossFit club judge - 2022-2023</li>
+            <li>Varsity Lacrosse - 2019-2022</li>
+            <li>DECA Chairman 2020-2022</li>
+            <li>NCFC Soccer 2018-2022</li>
+        </ul>
+
+        <h2>VOLUNTEER WORK</h2>
+        <ul>
+            <li>Apex United Methodist Church, Apex NC, youth group leader</li>
+            <li>Apex Outreach Service Project, Apex, NC, college leader for service projects</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
